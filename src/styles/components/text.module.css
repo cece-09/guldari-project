@@ -1,0 +1,14 @@
+.text {
+    padding: var(--size-10) 0;
+}
+.text h1 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+.text p {
+    max-width: 70%;
+
+    font-size: 0.8rem;
+    margin-bottom: 1em;
+}
