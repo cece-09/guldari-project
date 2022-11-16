@@ -1,0 +1,11 @@
+.sidebar {
+  width: fit-content;
+  padding: var(--size-20) var(--size-20);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  border: 1px solid var(--color-gray-2);
+  border-radius: 0.8em;
+  font-size: 0.9rem;
+}

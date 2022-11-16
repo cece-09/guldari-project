@@ -1,0 +1,42 @@
+.label {
+  display: flex;
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-gray-1);
+  margin-bottom: var(--size-10);
+}
+.label div:nth-child(1) {
+  width: 5em;
+}
+.label div:nth-child(2) {
+  color: var(--color-primary);
+}
+.store-template-layout {
+  padding-bottom: var(--size-40);
+  border-bottom: 1px solid var(--color-gray-2);
+}
+.store-template-layout h1 {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  margin-bottom: 0.8em;
+}
+
+/* markdown area */
+.store-template-body {
+  min-height: var(--store-page-body-height);
+}
+.store-template-markdown {
+  font-size: 0.9rem;
+  line-height: 1.5em;
+  word-break: keep-all;
+  padding-bottom: var(--size-40);
+}
+.store-template-slide {
+  max-width: 500px;
+  margin: var(--size-40) auto;
+  border-radius: 0.5em;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-bottom: 1px solid var(--color-gray-2);
+}

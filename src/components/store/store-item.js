@@ -1,18 +1,20 @@
 import * as React from "react";
-import { Link } from "gatsby"
-import Text from "../text"
-import { storeItem, storeImage } from './store.module.css'
+import { Link } from "gatsby";
+import Text from "../tag/text";
+import { storeItem, storeImage, storeText } from "./store.module.css";
 
-// 각 점포 아이템
+// each store item
 const StoreItem = ({ link, img, content }) => {
   return (
     <div className={storeItem}>
       <Link to={link}>
         <img className={storeImage} src={img} />
-        <Text content={content} />
+        <div className={storeText}>
+          <Text content={content} />
+        </div>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default StoreItem
+export default StoreItem;
