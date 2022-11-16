@@ -1,5 +1,6 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
+import TextItems from "../data/pageStaticContent";
+import useSlideData from "../hooks/useSlideData";
 import {
   slide,
   slideView,
@@ -7,26 +8,13 @@ import {
   top,
   middle,
   bottom,
+  nextButton
 } from "../styles/components/slide.module.css";
+import ArrowRightIcon from '../data/arrow_forward_ios.png';
 
 const Slide = () => {
-  const data = useStaticQuery(
-    graphql`
-      query SlideQuery {
-        allContentfulSlide {
-          edges {
-            node {
-              image {
-                url
-              }
-            }
-          }
-        }
-      }
-    `
-  );
-  const slideData = data.allContentfulSlide.edges;
-  const slideNum = slideData.length;
+  const slideData = useSlideData()
+  // const slideNum = slideData.length;
   const [isMove, setMove] = React.useState(null);
   const [view, setView] = React.useState([0, 1, 2]);
   const [front, setFront] = React.useState([0, 1, 2]);
@@ -38,19 +26,19 @@ const Slide = () => {
       <div className={`${slideView} ${isMove}`}>
         <div
           style={{
-            backgroundImage: `url(${slideData[view[0]].node.image.url})`,
+            backgroundImage: `url(${slideData[view[0]].url})`,
           }}
           className={classNameList[front[0]]}
         ></div>
         <div
           style={{
-            backgroundImage: `url(${slideData[view[1]].node.image.url})`,
+            backgroundImage: `url(${slideData[view[1]].url})`,
           }}
           className={classNameList[front[1]]}
         ></div>
         <div
           style={{
-            backgroundImage: `url(${slideData[view[2]].node.image.url})`,
+            backgroundImage: `url(${slideData[view[2]].url})`,
           }}
           className={classNameList[front[2]]}
         ></div>
@@ -70,7 +58,13 @@ const Slide = () => {
 
   /* 다음 슬라이드 버튼 */
   const NextButton = () => {
-    return <button onClick={nextSlide}>next</button>;
+    return (
+      <button
+        className={nextButton}
+        onClick={nextSlide}>
+        <img src={ArrowRightIcon}/>
+      </button>
+    );
   };
 
   /*** 리턴 */

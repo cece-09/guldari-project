@@ -1,45 +1,33 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
-
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Text from "../components/text";
 import TextItems from "../data/pageStaticContent";
 import Slide from "../components/slide";
-import Store from "../components/store_item";
+import Store from "../components/store/store";
+import Section from '../components/section';
 import "../styles/global.css";
+import Flexbox from "../components/flexbox";
 
-const IndexPage = ({ data }) => {
-  // const allStorePages = data.allSitePage.edges;
+const IndexPage = () => {
   return (
     <Layout>
-      <Slide />
-      <Text content={TextItems.section1_1} />
-      <Store />
-      {/* {allStorePages.map(({ node }, i) => {
-        return (
-          <li key={i}>
-            <Link to={node.path}>{node.pageContext.store.name}</Link>
-          </li>
-        );
-      })} */}
+      <Section>
+        <Flexbox>
+          <Text content={TextItems.section1_1} align='left' />
+          <Slide />
+        </Flexbox>
+      </Section>
+      <Section bgColor='#eee'>
+        <Text content={TextItems.section1_2} align='center' />
+        <Store />
+      </Section>
+      <Section>
+        <Text content={TextItems.section1_2} align='center' />
+      </Section>
     </Layout>
   );
 };
 
 export const Head = () => <Seo title="Home" />;
-// export const query = graphql`
-//   query MyQuery {
-//     allSitePage(
-//       filter: { path: { nin: ["/dev-404-page/", "/404/", "/404.html", "/"] } }
-//     ) {
-//       edges {
-//         node {
-//           path
-//           pageContext
-//         }
-//       }
-//     }
-//   }
-// `;
 export default IndexPage;
