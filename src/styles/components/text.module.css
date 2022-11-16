@@ -1,5 +1,16 @@
 .text {
     padding: var(--size-10) 0;
+    display: flex;
+    flex-direction: column;
+}
+.right {
+    justify-content: right;
+}
+.center {
+    align-items: center;
+}
+.left {
+    justify-content: left;
 }
 .text h1 {
     font-weight: bold;
@@ -8,7 +19,12 @@
 }
 .text p {
     max-width: 70%;
-
+    word-break: keep-all;
     font-size: 0.8rem;
     margin-bottom: 1em;
+    line-height: 1.2em;
+}
+.text button {
+    max-width: fit-content;
+    padding: var(--size-5) var(--size-10);
 }

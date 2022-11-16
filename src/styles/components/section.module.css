@@ -1,0 +1,8 @@
+.section {
+  padding: var(--size-40) var(--size-10);
+}
+.inner {
+  display: block;
+  width: 1080px;
+  margin: 0 auto;
+}

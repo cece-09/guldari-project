@@ -1,14 +1,4 @@
-/* <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()} &middot; Built with Gatsby
-        </footer>
-      </div>
-    </> */
-
 .footer {
-  position: absolute;
-  bottom: 0px;
+  font-size: 0.7rem;
+  color: gray;
 }
