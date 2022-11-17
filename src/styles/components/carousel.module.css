@@ -1,9 +1,8 @@
 .carousel {
   --carousel-width: 100%;
-  --carousel-height: 400px;
 
   width: var(--carousel-width);
-  height: var(--carousel-height);
+  aspect-ratio: 4 / 3;
   position: relative;
 }
 .viewport {
@@ -35,23 +34,44 @@
   background: var(--color-theme);
   opacity: 30%;
 }
+.button-group {
+  width: inherit;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 10%;
   height: 10%;
   background-color: transparent;
-  position: absolute;
   border: none;
-  top: 45%;
   color: white;
   z-index: 10;
 }
 .button svg {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.next-button {
+  position: absolute;
+  right: 0.5em;
+  top: calc((var(--slide-lg) / 2) + (2em / 2));
+  z-index: 10;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: #ffffff80;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5em;
+}
+.next-button svg {
   width: 2em;
   height: 2em;
-}
-.button:nth-of-type(1) {
-  left: 0;
-}
-.button:nth-of-type(2) {
-  right: 0;
+  color: white;
 }

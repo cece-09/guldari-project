@@ -1,5 +1,5 @@
 import * as React from "react";
-import Button from "./button.js";
+import Button from "./button";
 import {
   text,
   center,
@@ -8,7 +8,7 @@ import {
 } from "../../styles/components/text.module.css";
 
 const Text = ({ content, align }) => {
-  const { title, body, button } = content;
+  const { title, body, button, link } = content;
   const alignItems = (align) => {
     if (align === "center") return center;
     else if (align === "right") return right;
@@ -19,7 +19,7 @@ const Text = ({ content, align }) => {
     <div className={`${text} ${alignItems(align)}`}>
       {!title ? <></> : <h1>{title}</h1>}
       {!body ? <></> : <p>{body}</p>}
-      {!button ? <></> : <Button>{button}</Button>}
+      {!button ? <></> : <Button to={link}>{button}</Button>}
     </div>
   );
 };

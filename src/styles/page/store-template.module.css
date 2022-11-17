@@ -24,13 +24,21 @@
 
 /* markdown area */
 .store-template-body {
-  min-height: var(--store-page-body-height);
+  /* min-height: var(--store-page-body-height); */
 }
 .store-template-markdown {
   font-size: 0.9rem;
   line-height: 1.5em;
-  word-break: keep-all;
   padding-bottom: var(--size-40);
+}
+.store-template-markdown h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+  word-break: keep-all;
+}
+.store-template-markdown p {
+  margin-bottom: 1em;
 }
 .store-template-slide {
   max-width: 500px;

@@ -5,6 +5,7 @@ import Carousel from "../components/carousel";
 import Layout from "../components/layout/layout";
 import Seo from "../components/seo";
 import Section from "../components/tag/section";
+import StorePageLayout from "../components/layout/store-page-layout";
 import {
   storeTemplateLayout,
   storeTemplateBody,
@@ -37,13 +38,11 @@ const options = {
 };
 
 const Label = ({ prop, val }) => {
-  return val != null ? (
+  return (
     <div class={label}>
       <div>{prop}</div>
-      <div>{val}</div>
+      <div>{val !== null ? val : '-'}</div>
     </div>
-  ) : (
-    <></>
   );
 };
 
@@ -52,7 +51,7 @@ const storeTemplate = ({ pageContext }) => {
     pageContext.store;
 
   return (
-    <Layout>
+    <StorePageLayout currPage={{'slug': slug, 'category': category}}>
       <Section>
         <div className={storeTemplateLayout}>
           <h1>{name}</h1>
@@ -61,7 +60,6 @@ const storeTemplate = ({ pageContext }) => {
           <Label prop="카테고리" val={category} />
         </div>
       </Section>
-      <Sidebar />
       <Section className={storeTemplateBody}>
         <div className={storeTemplateMarkdown}>
           {renderRichText(body, options)}
@@ -70,7 +68,7 @@ const storeTemplate = ({ pageContext }) => {
           <Carousel images={photo} />
         </div>
       </Section>
-    </Layout>
+    </StorePageLayout>
   );
 };
 export const Head = () => <Seo title="Store" />;

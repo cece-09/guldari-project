@@ -10,7 +10,7 @@ import {
   bottom,
   nextButton
 } from "../styles/components/slide.module.css";
-import ArrowRightIcon from '../data/arrow_forward_ios.png';
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const Slide = () => {
   const slideData = useSlideData()
@@ -62,7 +62,7 @@ const Slide = () => {
       <button
         className={nextButton}
         onClick={nextSlide}>
-        <img src={ArrowRightIcon}/>
+        <AiOutlineRight/>
       </button>
     );
   };

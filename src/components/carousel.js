@@ -6,6 +6,7 @@ import {
   container,
   image,
   button,
+  buttonGroup
 } from "../styles/components/carousel.module.css";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
@@ -46,9 +47,15 @@ const Carousel = ({ images }) => {
 
   return (
     <div className={carousel}>
-      <button onClick={prevSlide} className={button}>
-        <AiOutlineLeft />
-      </button>
+      <div className={buttonGroup}>
+        <button onClick={prevSlide} className={button}>
+          <AiOutlineLeft />
+        </button>
+        <button onClick={nextSlide} className={button}>
+          <AiOutlineRight />
+        </button>
+      </div>
+
       <div className={viewport}>
         <div className={container} ref={carouselRef}>
           {images.map((img, i) => {
@@ -56,10 +63,8 @@ const Carousel = ({ images }) => {
           })}
         </div>
       </div>
-      <button onClick={nextSlide} className={button}>
-        <AiOutlineRight />
-      </button>
-    </div>
+
+    </div >
   );
 };
 

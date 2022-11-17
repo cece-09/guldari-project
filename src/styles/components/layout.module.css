@@ -5,3 +5,13 @@
   font-size: 0.7rem;
   color: gray;
 }
+.footer > div {
+  max-width: 1080px;
+  display: flex;
+  justify-content: center;
+  margin: 3em 0;
+}
+.footer > div img {
+  padding-right: 1em;
+  width: 100px;
+}

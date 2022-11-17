@@ -2,6 +2,7 @@
     border: none;
     background-color: var(--color-primary);
     color: white;
-    border-radius: var(--size-20);
+    border-radius: 0.5em;
     padding: var(--size-5) var(--size-10);
+    white-space: nowrap;
 }

@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import Header from "./header";
 import { footer } from "../../styles/components/layout.module.css";
-import logo from "../../data/logo.svg";
+import Sidebar from "./sidebar";
+import { storePageLayout } from '../../styles/components/store-page-layout.module.css'
 
-const Layout = ({ children }) => {
+const StorePageLayout = ({ children, currPage }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -20,24 +21,20 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
-        <main>{children}</main>
+        <div className={storePageLayout}>
+          <Sidebar slug={currPage.slug} category={currPage.category} />
+          <main>{children}</main>
+        </div>
         <footer className={footer}>
-          <div>
-            <img alt="logo1" height={30} style={{ margin: 0 }} src={logo} />
-            <img alt="logo2" height={30} style={{ margin: 0 }} src={logo} />
-            <img alt="logo3" height={30} style={{ margin: 0 }} src={logo} />
-
-          </div>
           © {new Date().getFullYear()} &middot; Built with Gatsby
-
         </footer>
       </div>
     </>
   );
 };
 
-Layout.propTypes = {
+StorePageLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Layout;
+export default StorePageLayout;

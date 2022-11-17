@@ -8,6 +8,7 @@
 }
 .center {
     align-items: center;
+    text-align: center;
 }
 .left {
     justify-content: left;
@@ -24,7 +25,8 @@
     margin-bottom: 1em;
     line-height: 1.2em;
 }
-.text button {
+.text a div {
     max-width: fit-content;
-    padding: var(--size-5) var(--size-10);
+    padding: 0.8em 1.2em;
+    font-size: 0.9rem;
 }

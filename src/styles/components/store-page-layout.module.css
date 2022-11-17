@@ -1,0 +1,24 @@
+@media screen and (max-width: 475px) {
+  .store-page-layout {
+    flex-wrap: wrap-reverse;
+    /* padding: 0; */
+  }
+}
+@media screen and (min-width: 476px) and (max-width: 700px) {
+  .store-page-layout {
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 701px) {
+  .store-page-layout {
+    flex-wrap: nowrap;
+  }
+}
+.store-page-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  /* padding: 0 var(--size-20); */
+}

@@ -17,6 +17,7 @@ const TextItems = {
     title: "별양동 굴다리시장",
     body: "1980년대부터 그 자리를 지켜 온 과천 별양동 굴다리시장의 이야기",
     button: btn_detail,
+    link: '/about-market'
   },
   section1_2: {
     title: "시장 점포 안내",
@@ -25,6 +26,8 @@ const TextItems = {
   section1_3: {
     title: "리마켓프로젝트",
     body: "과천 굴다리시장을 중심으로 오래된 장소를 탐구하는 실험입니다.",
+    button: btn_detail,
+    link: '/about-project'
   },
 };
 
