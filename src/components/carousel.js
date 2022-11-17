@@ -7,7 +7,7 @@ import {
   image,
   button,
 } from "../styles/components/carousel.module.css";
-import { AiOutlineLeft, AiOutlineRight } from "react-icon";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const Image = ({ src }) => {
   return (
