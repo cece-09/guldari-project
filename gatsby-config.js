@@ -6,7 +6,8 @@ module.exports = {
   siteMetadata: {
     title: `리마켓프로젝트`,
     description: `리마켓프로젝트 웹사이트입니다.`,
-    author: `@remarket`,
+    image: '/icon.svg',
+    author: `@gc_guldari`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
