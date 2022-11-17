@@ -6,18 +6,20 @@ import TextItems from "../data/pageStaticContent";
 import Slide from "../components/slide";
 import Store from "../components/store/store";
 import Section from "../components/tag/section";
-import Flexbox from "../components/tag/flexbox";
+import MainFlexbox from "../components/tag/flexbox";
 import "../styles/reset.css";
 import "../styles/global.css";
+import seoImage from "../data/site-image.png";
 
 const IndexPage = () => {
   return (
     <Layout>
       <Section>
-        <Flexbox>
+        <MainFlexbox>
           <Text content={TextItems.section1_1} align="left" />
           <Slide />
-        </Flexbox>
+
+        </MainFlexbox>
       </Section>
       <Section bgColor="#eee">
         <Text content={TextItems.section1_2} align="center" />
@@ -30,5 +32,5 @@ const IndexPage = () => {
   );
 };
 
-export const Head = () => <Seo title="Home" />;
+export const Head = () => <Seo title="Home" imagePath={seoImage}/>;
 export default IndexPage;

@@ -1,6 +1,6 @@
 @media screen and (max-width: 475px) {
   .slide {
-    width: 100%;
+    width: 80%;
     --slide-lg: 15em;
     --slide-md: 12em;
     --slide-sm: 10em;
@@ -9,7 +9,7 @@
 }
 @media screen and (min-width: 476px) and (max-width: 700px) {
   .slide {
-    width: 100%;
+    width: 70%;
     --slide-lg: 20em;
     --slide-md: 15em;
     --slide-sm: 12em;
@@ -18,7 +18,7 @@
 }
 @media screen and (min-width: 701px) {
   .slide {
-    width: 50%;
+    width: 70%;
     --slide-lg: 22em;
     --slide-md: 18em;
     --slide-sm: 15em;

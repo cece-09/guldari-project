@@ -9,7 +9,9 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, title, children }) {
+
+
+function Seo({ description, title, children, imagePath }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,12 +20,12 @@ function Seo({ description, title, children }) {
             title
             description
             author
+            image
           }
         }
       }
     `
   )
-
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
 
@@ -34,9 +36,11 @@ function Seo({ description, title, children }) {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content={imagePath} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
       <meta name="twitter:title" content={title} />
+      <meta property="twitter:image" content={imagePath} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
     </>

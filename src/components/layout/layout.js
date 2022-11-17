@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from "gatsby";
 import Header from "./header";
 import { footer } from "../../styles/components/layout.module.css";
 import logo from "../../data/logo.svg";
+import culture from "../../data/culture.svg";
+import editorial from "../../data/editorial.svg";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,8 +25,8 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer className={footer}>
           <div>
-            <img alt="logo1" height={30} style={{ margin: 0 }} src={logo} />
-            <img alt="logo2" height={30} style={{ margin: 0 }} src={logo} />
+            <img alt="logo1" height={30} style={{ margin: 0 }} src={culture} />
+            <img alt="logo2" height={30} style={{ margin: 0 }} src={editorial} />
             <img alt="logo3" height={30} style={{ margin: 0 }} src={logo} />
 
           </div>

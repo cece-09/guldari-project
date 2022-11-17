@@ -1,17 +1,11 @@
 import * as React from 'react'
-const flexBoxStyle = {
-  display: 'flex',
-  width: '100%',
-  flexDirection: 'row',
-  flexWrap: 'wrap-reverse',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-}
-const Flexbox = ({ children }) => {
+import { mainFlexbox } from '../../styles/components/main-flexbox.module.css'
+
+const MainFlexbox = ({ children }) => {
   return (
-    <div style={flexBoxStyle}>
+    <div className={mainFlexbox}>
       {children}
     </div>
   )
 }
-export default Flexbox
+export default MainFlexbox

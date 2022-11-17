@@ -1,0 +1,33 @@
+@media screen and (max-width: 475px) {
+  .main-flexbox {
+    flex-direction: column-reverse;
+  }
+  .main-flexbox > div:nth-child(1){
+    align-self: flex-start;
+  }
+  .main-flexbox > div:nth-child(2){
+    align-self: flex-end;
+  }
+}
+@media screen and (min-width: 476px) and (max-width: 850px) {
+  .main-flexbox {
+    flex-direction: column-reverse;
+  }
+  .main-flexbox > div:nth-child(1){
+    align-self: flex-start;
+  }
+  .main-flexbox > div:nth-child(2){
+    align-self: flex-end;
+  }
+}
+@media screen and (min-width: 851px) {
+  .main-flexbox {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.main-flexbox {
+  width: 100%;
+  display: flex;
+}
