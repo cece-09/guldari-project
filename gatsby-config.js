@@ -8,7 +8,7 @@ module.exports = {
     description: `리마켓프로젝트 웹사이트입니다.`,
     image: '/site-image.png',
     author: `@gc_guldari`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://gcguldari.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-image`,
